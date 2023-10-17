@@ -50,17 +50,21 @@
     .btn__exit--menu {
         display: block;
     }
+    
+}
+
+@media only screen and (max-width:480px) {
 
     .nav__blok {
         display: inline-block;
         position: absolute;
-        background-color: whitesmoke;
-        z-index: 10;
-        width: 327px;
+        background: linear-gradient(180deg, rgba(254, 252, 247, 0.50) 0%, #FEFCF7 55.94%);
+        width: 480px;
         height: 400px;
         transform: translateY(258.6px);
+    
     }
-
+    
     .nav__link{        
         color: #333D4B;
         text-align: center;
@@ -70,5 +74,22 @@
         font-weight: 900;
         line-height: 32px; 
     }
+
+    .nav__blok {
+        animation: Block 0.8s ease;
+    }
+    
+    @keyframes Block {
+        from {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+    
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
     
 }
